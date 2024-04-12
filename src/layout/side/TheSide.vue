@@ -23,20 +23,20 @@
         <div class="sidebar-menu">
             <a-menu>
                 <a-menu-item>
-                    <star theme="filled" size="20" fill="#515c6b"/>常用推荐
+                    常用推荐
                 </a-menu-item>
                 <a-menu-item>
-                    <tag-one theme="filled" size="20" fill="#515c6b"/>原站收录
+                    原站收录
                 </a-menu-item>
                 <a-menu-item>
-                    <telegram theme="filled" size="20" fill="#515c6b"/>原创网页
+                    原创网页
                 </a-menu-item>
                 <a-menu-item>
-                    <video-one theme="filled" size="20" fill="#515c6b"/>影音推荐
+                    影音推荐
                 </a-menu-item>
                 <a-sub-menu>
                     <template #title>
-                        <doc-detail theme="filled" size="20" fill="#515c6b"/>社区咨询
+                        社区咨询
                     </template>
                     <a-menu-item>
                         咨询
@@ -51,10 +51,10 @@
         <div class="sidebar-bottom">
             <a-menu>
                 <a-menu-item>
-                    <folder-upload theme="filled" size="20" fill="#515c6b"/>网站提交
+                    网站提交
                 </a-menu-item>
                 <a-menu-item>
-                    <like theme="filled" size="20" fill="#515c6b"/>关于导航
+                    关于导航
                 </a-menu-item>
             </a-menu>
         </div>
@@ -63,7 +63,6 @@
 
 <script setup>
   import {ref} from "vue";
-  import { Star, TagOne, Telegram, VideoOne, DocDetail, FolderUpload, Like } from '@icon-park/vue-next'
   const collapsed = ref(false)
   const onCollapse = () => {
       collapsed.value = !collapsed.value

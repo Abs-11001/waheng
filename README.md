@@ -11,4 +11,13 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 - less: 4.2.0
 - pinia: 2.1.7
 - vue-router: 4
-- icon-park/vue-next: 1.4.2
+- font-awesome: 4.7.0
+- @arco-plugins/vite-vue: 1.4.5
+- @fortawesome/fontawesome-svg-core: 6.5.2
+- @fortawesome/free-brands-svg-icons: 6.5.2
+- @fortawesome/free-regular-svg-icons: 6.5.2
+- @fortawesome/free-solid-svg-icons: 6.5.2
+- @fortawesome/vue-fontawesome: 3.0.6
+
+## 教程
+* fontawesome vue使用教程：https://blog.csdn.net/zxl_start/article/details/135191859
