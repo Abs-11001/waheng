@@ -8,3 +8,7 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 ## 技术栈
 - Vue: 3.4.21
 - Vite: 5.2.0
+- less: 4.2.0
+- pinia: 2.1.7
+- vue-router: 4
+- icon-park/vue-next: 1.4.2
