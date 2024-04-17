@@ -1,5 +1,7 @@
 <template>
-  <a-layout-footer>footer</a-layout-footer>
+  <a-layout-footer>
+      footer
+  </a-layout-footer>
 </template>
 
 <script>
