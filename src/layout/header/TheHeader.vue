@@ -1,54 +1,132 @@
 <template>
   <a-layout-header>
-      <div class="left">
-          <div class="collapse item">
-
-          </div>
-          <div class="home item">
-              <a href="">
-                  <font-awesome-icon icon="home" class="fa-lg"/><span>首页</span>
-              </a>
-          </div>
-          <div class="about item">
-              <a href="">
-                  <font-awesome-icon icon="info-circle" class="fa-lg"/><span>关于</span>
-              </a>
-          </div>
-          <div class="temperature item">
-
+      <div class="header">
+          <div class="nav-bar" :class="scrollFlag ? 'has-bg': ''">
+              <div class="container">
+                  <div class="left">
+                      <div class="collapse item" @click="handleCollapse">
+                          <font-awesome-icon v-if="sidebarCollapsed" icon="arrow-right" class="fa-lg"/>
+                          <font-awesome-icon v-else icon="arrow-left" class="fa-lg"/>
+                      </div>
+                      <div class="home item">
+                          <a href="">
+                              <font-awesome-icon icon="home" class="fa-lg"/><span>首页</span>
+                          </a>
+                      </div>
+                      <div class="about item">
+                          <a href="">
+                              <font-awesome-icon icon="info-circle" class="fa-lg"/><span>关于</span>
+                          </a>
+                      </div>
+                      <div class="temperature item">
+                      </div>
+                  </div>
+                  <div class="right">
+                      <div class="Hitokoto">
+                          <span>燕子来时新社，梨花落后清明。</span>
+                      </div>
+                      <div class="search">
+                          <font-awesome-icon icon="search" class="fa-2x"/>
+                      </div>
+                  </div>
+              </div>
           </div>
       </div>
-      <div class="right">
-          <div class="Hitokoto">
-              <span>燕子来时新社，梨花落后清明。</span>
-          </div>
-          <div class="search"></div>
-      </div>
+      <div class="placeholder"></div>
   </a-layout-header>
 </template>
 
 <script setup>
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import {faHouse, faInfoCircle} from '@fortawesome/free-solid-svg-icons'
-library.add(faHouse, faInfoCircle)
+import {
+    faArrowLeft,
+    faArrowRight,
+    faHouse,
+    faInfoCircle,
+    faSearch
+} from '@fortawesome/free-solid-svg-icons'
+import { onMounted, ref} from "vue";
+import {useStatusStore} from "@/stores/status.js";
+import {storeToRefs} from "pinia";
+
+library.add(faHouse, faInfoCircle, faSearch, faArrowRight, faArrowLeft)
+
+const statusStore = useStatusStore()
+const { sidebarCollapsed } = storeToRefs(statusStore)
+
+// 页面是否滚动标记
+const scrollFlag = ref(false)
+
+onMounted(() => {
+    window.addEventListener('scroll', handleScroll)
+})
+
+const handleCollapse = () => {
+    statusStore.changeCollapseStatus()
+}
+
+const handleScroll = () => {
+    const scrollY = window.scrollY
+    if(scrollY > 0) {
+        scrollFlag.value = true
+    } else {
+        scrollFlag.value = false
+    }
+}
 </script>
 
 <style lang="less" scoped>
   .arco-layout-header{
-    display: flex;
-    height: 75px;
-    .left{
-      display: flex;
-      flex: 1;
-      .item{
-        display: flex;
-        align-items: center;
-        margin: 0 15px;
-        span{
-          margin-left: 5px;
+    .header {
+      position: fixed;
+      left: 170px;
+      right: 0;
+      .nav-bar{
+        .container{
+          display: flex;
+          height: 75px;
+          align-items: center;
+          color: white;
+          a{
+            color: inherit;
+          }
+          .left{
+            display: flex;
+            flex: 1;
+            .collapse{
+              cursor: pointer;
+              transition: linear .25s;
+            }
+            .collapse:hover{
+              transform: rotate(360deg * 2);
+            }
+            .item{
+              display: flex;
+              align-items: center;
+              margin: 0 15px;
+              span{
+                margin-left: 5px;
+              }
+            }
+          }
+          .right{
+            display: flex;
+            align-items: center;
+            .search{
+              margin: 0 20px 0 10px;
+            }
+          }
         }
       }
+      .nav-bar.has-bg .container{
+        background:rgba(255,255,255,.7);
+        backdrop-filter: blur(10px);
+        color: #000;
+      }
+    }
+    .placeholder{
+      height: 75px;
     }
   }
 </style>

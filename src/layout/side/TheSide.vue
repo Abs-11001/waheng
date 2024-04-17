@@ -3,7 +3,8 @@
         id="sidebar"
         hide-trigger
         collapsible
-        :collapsed="collapsed">
+        :width=170
+        :collapsed="sidebarCollapsed">
         <div class="sidebar-logo">
             <div class="logo">
                 <a href="" class="logo-expanded">
@@ -23,20 +24,20 @@
         <div class="sidebar-menu">
             <a-menu>
                 <a-menu-item>
-                    常用推荐
+                    <font-awesome-icon icon="star" class="icon fa-lg" /> 常用推荐
                 </a-menu-item>
                 <a-menu-item>
-                    原站收录
+                    <font-awesome-icon icon="tag" class="icon fa-lg" /> 原站收录
                 </a-menu-item>
                 <a-menu-item>
-                    原创网页
+                    <font-awesome-icon icon="paper-plane" class="icon fa-lg" /> 原创网页
                 </a-menu-item>
                 <a-menu-item>
-                    影音推荐
+                    <font-awesome-icon icon="video" class="icon fa-lg" /> 影音推荐
                 </a-menu-item>
                 <a-sub-menu>
                     <template #title>
-                        社区咨询
+                        <font-awesome-icon icon="newspaper" class="icon fa-lg" /> 社区咨询
                     </template>
                     <a-menu-item>
                         咨询
@@ -63,14 +64,25 @@
 
 <script setup>
   import {ref} from "vue";
-  const collapsed = ref(false)
-  const onCollapse = () => {
-      collapsed.value = !collapsed.value
-  }
+  import { FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+  import {library} from "@fortawesome/fontawesome-svg-core";
+  import {faNewspaper, faPaperPlane, faStar, faTag, faVideo} from "@fortawesome/free-solid-svg-icons";
+
+  library.add(faStar, faTag, faPaperPlane, faVideo, faNewspaper)
+
+  import {useStatusStore} from "@/stores/status.js";
+  import {storeToRefs} from "pinia";
+
+  const statusStore = useStatusStore()
+  const { sidebarCollapsed } = storeToRefs(statusStore)
+
 </script>
 
 <style lang="less" scoped>
   .arco-layout-sider{
+    position: fixed;
+    left: 0;
+    top: 0;
     height: 100vh;
     max-width: 170px;
     :deep(.arco-layout-sider-children) {
@@ -96,12 +108,12 @@
     flex: 1;
   }
   .arco-menu-item,  :deep(.arco-menu-inline-header){
-    display: flex;
-    align-items: center;
+    //display: flex;
+    //align-items: center;
   }
-  .i-icon{
-    display: flex;
-    align-items: center;
+  .icon{
+    //display: flex;
+    //align-items: center;
     margin-right: 10px;
   }
   .sidebar-bottom{
