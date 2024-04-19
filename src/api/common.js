@@ -10,7 +10,7 @@ export function getSmartTipsBaidu(query) {
 
 export function getHitokoto(query) {
     return request({
-        url: 'https://v1.hitokoto.cn',
+        url: '/hitokoto',
         method: 'get',
     })
 }

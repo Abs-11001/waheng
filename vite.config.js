@@ -14,6 +14,11 @@ export default defineConfig({
                 changeOrigin: true,
                 rewrite: (path) => path.replace(/^\/api\/baidu/, ""),
             },
+            "/api/hitokoto": {
+                target: "https://v1.hitokoto.cn",
+                changeOrigin: true,
+                rewrite: (path) => path.replace(/^\/api\/hitokoto/, ""),
+            },
             "/api": {
                 target: "http://localhost:8080",
                 changeOrigin: true,
