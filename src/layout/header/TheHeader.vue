@@ -19,11 +19,12 @@
                           </a>
                       </div>
                       <div class="temperature item">
+                          <iframe allowtransparency="true" frameborder="0" width="180" height="36" scrolling="no" src="//tianqi.2345.com/plugin/widget/index.htm?s=3&z=2&t=0&v=0&d=3&bd=0&k=000000&f=&ltf=009944&htf=cc0000&q=1&e=1&a=1&c=54511&w=180&h=36&align=center"></iframe>
                       </div>
                   </div>
                   <div class="right">
                       <div class="Hitokoto">
-                          <span>燕子来时新社，梨花落后清明。</span>
+                          <a href="" target="_blank" ref="hitokotoRef"></a>
                       </div>
                       <div class="search">
                           <font-awesome-icon icon="search" class="fa-2x"/>
@@ -49,6 +50,7 @@ import {
 import { onMounted, ref} from "vue";
 import {useStatusStore} from "@/stores/status.js";
 import {storeToRefs} from "pinia";
+import {getHitokoto} from "@/api/common.js";
 
 library.add(faHouse, faInfoCircle, faSearch, faArrowRight, faArrowLeft)
 
@@ -57,9 +59,16 @@ const { sidebarCollapsed } = storeToRefs(statusStore)
 
 // 页面是否滚动标记
 const scrollFlag = ref(false)
+// hitokotoRef
+const hitokotoRef = ref(null)
 
 onMounted(() => {
     window.addEventListener('scroll', handleScroll)
+    getHitokoto().then(res => {
+        const { hitokoto, uuid } = res
+        hitokotoRef.value.href = `https://hitokoto.cn/?uuid=${uuid}`
+        hitokotoRef.value.innerText = hitokoto
+    })
 })
 
 const handleCollapse = () => {
