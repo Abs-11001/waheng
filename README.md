@@ -18,6 +18,7 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 - @fortawesome/free-regular-svg-icons: 6.5.2
 - @fortawesome/free-solid-svg-icons: 6.5.2
 - @fortawesome/vue-fontawesome: 3.0.6
+- axios: 1.6.8
 
 ## 教程
 * fontawesome vue使用教程：https://blog.csdn.net/zxl_start/article/details/135191859
