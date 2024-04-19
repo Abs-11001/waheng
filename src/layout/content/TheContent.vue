@@ -76,7 +76,384 @@
             </div>
         </div>
         <div class="main-content">
-            <div v-for="i in 121">content</div>
+            <div class="item">
+                <h2 class="title">
+                    <icon-list style="stroke-width: 4;"/>
+                    <a href="">常用推荐</a>
+                </h2>
+                <div class="row">
+                    <a-row
+                        :gutter="24">
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+
+                    </a-row>
+                </div>
+            </div>
+            <div class="item">
+                <h2 class="title">
+                    <icon-list style="stroke-width: 4;"/>
+                    <a href="">常用推荐</a>
+                </h2>
+                <div class="row">
+                    <a-row
+                            :gutter="24">
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+
+                    </a-row>
+                </div>
+            </div>
+            <div class="item">
+                <h2 class="title">
+                    <icon-list style="stroke-width: 4;"/>
+                    <a href="">常用推荐</a>
+                </h2>
+                <div class="row">
+                    <a-row
+                            :gutter="24">
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+
+                    </a-row>
+                </div>
+            </div>
+            <div class="item">
+                <h2 class="title">
+                    <icon-list style="stroke-width: 4;"/>
+                    <a href="">常用推荐</a>
+                </h2>
+                <div class="row">
+                    <a-row
+                            :gutter="24">
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+
+                    </a-row>
+                </div>
+            </div>
+            <div class="item">
+                <h2 class="title">
+                    <icon-list style="stroke-width: 4;"/>
+                    <a href="">常用推荐</a>
+                </h2>
+                <div class="row">
+                    <a-row
+                            :gutter="24">
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+
+                    </a-row>
+                </div>
+            </div>
+            <div class="item">
+                <h2 class="title">
+                    <icon-list style="stroke-width: 4;"/>
+                    <a href="">常用推荐</a>
+                </h2>
+                <div class="row">
+                    <a-row
+                            :gutter="24">
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+                        <a-col :xs="12" :sm="12" :md="8" :lg="6" :xl="6" :xxl="4">
+                            <the-card></the-card>
+                        </a-col>
+
+                    </a-row>
+                </div>
+            </div>
         </div>
     </a-layout-content>
 </template>
@@ -86,6 +463,9 @@ import {nextTick, onMounted, reactive, ref} from 'vue'
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import {faBell, faSearch, faXmark} from "@fortawesome/free-solid-svg-icons";
 import {library} from "@fortawesome/fontawesome-svg-core";
+import { IconList } from '@arco-design/web-vue/es/icon';
+import TheCard from "@/components/TheCard.vue";
+
 
 library.add(faSearch, faBell, faXmark)
 
@@ -522,6 +902,8 @@ const handleFormSubmit = () => {
         return false;
     }
 }
+
+
 </script>
 
 <style lang="less" scoped>
@@ -708,7 +1090,8 @@ const handleFormSubmit = () => {
       }
     }
 
-    background-image: linear-gradient(45deg, #8618db 0%, #d711ff 50%, #460fdd 100%);
+    //background-image: linear-gradient(45deg, #17EAD9 0%, #A7F995 50%, #F9F871 100%);
+    background-image: linear-gradient(45deg, #C93CE7 0%, #30a1e3 25%, #00BB9D 75%, #5CBAB3 100%);
     background-size: 400%;
     background-position: 0 100%;
     animation: gradient 7.5s ease-in-out infinite;
@@ -720,6 +1103,18 @@ const handleFormSubmit = () => {
   }
   .main-content{
     background: #f9f9f9;
+    padding: 0 30px;
+    .title{
+      margin: 1.5rem 0;
+      font-weight: 500;
+      font-size: 1.25rem;
+      color: #555;
+      font-family: "SF Pro SC","SF Pro Text","SF Pro Icons",PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;
+      a{
+        color: #555;
+        margin-left: 10px;
+      }
+    }
   }
 }
 </style>
