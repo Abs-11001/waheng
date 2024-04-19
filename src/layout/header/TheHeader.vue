@@ -26,9 +26,9 @@
                       <div class="Hitokoto">
                           <a href="" target="_blank" ref="hitokotoRef"></a>
                       </div>
-                      <div class="search">
-                          <font-awesome-icon icon="search" class="fa-2x"/>
-                      </div>
+<!--                      <div class="search">-->
+<!--                          <font-awesome-icon icon="search" class="fa-2x"/>-->
+<!--                      </div>-->
                   </div>
               </div>
           </div>
@@ -68,6 +68,8 @@ onMounted(() => {
         const { hitokoto, uuid } = res
         hitokotoRef.value.href = `https://hitokoto.cn/?uuid=${uuid}`
         hitokotoRef.value.innerText = hitokoto
+    }, err => {
+        itokotoRef.value.innerText = '双手敲尽了代码，也敲尽了岁月'
     })
 })
 
