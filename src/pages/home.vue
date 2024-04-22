@@ -1,11 +1,16 @@
 <template>
     <a-layout class="page-container">
         <the-side/>
-        <a-layout id="content-container" :class="sidebarCollapsed ? 'mini-sidebar' : ''">
-            <the-header/>
-            <the-content />
-            <the-footer/>
-        </a-layout>
+        <a-scrollbar
+            @scroll="handleScroll"
+            outer-class="scroll-bar"
+            style="height:100vh;overflow: auto;">
+            <a-layout id="content-container" :class="sidebarCollapsed ? 'mini-sidebar' : ''">
+                <the-header :scroll-flag="scrollFlag"/>
+                <the-content />
+                <the-footer/>
+            </a-layout>
+        </a-scrollbar>
     </a-layout>
 </template>
 
@@ -16,10 +21,21 @@ import TheFooter from "../layout/footer/TheFooter.vue";
 import TheContent from "@/layout/content/TheContent.vue";
 import {useStatusStore} from "@/stores/status.js";
 import {storeToRefs} from "pinia";
+import {ref} from "vue";
 
 const statusStore = useStatusStore()
 const { sidebarCollapsed } = storeToRefs(statusStore)
 
+// 页面是否滚动标记
+const scrollFlag = ref(false)
+const handleScroll = (e) => {
+    const scrollTop = e.target.scrollTop
+    if(scrollTop > 0) {
+        scrollFlag.value = true
+    } else {
+        scrollFlag.value = false
+    }
+}
 </script>
 
 <style lang="less">
@@ -35,5 +51,12 @@ const { sidebarCollapsed } = storeToRefs(statusStore)
     }
     #content-container.mini-sidebar .header{
       left: 48px;
+    }
+    .scroll-bar .arco-scrollbar-thumb-direction-vertical {
+      width: 11px;
+    }
+    .scroll-bar .arco-scrollbar-thumb-direction-vertical .arco-scrollbar-thumb-bar {
+      width: 5px;
+      background: #cd84f1;
     }
 </style>

@@ -24,7 +24,7 @@
                   </div>
                   <div class="right">
                       <div class="Hitokoto">
-                          <a href="" target="_blank" ref="hitokotoRef"></a>
+                          <a href="" target="_blank" ref="hitokotoRef">双手敲尽了代码，也敲尽了岁月</a>
                       </div>
 <!--                      <div class="search">-->
 <!--                          <font-awesome-icon icon="search" class="fa-2x"/>-->
@@ -57,19 +57,18 @@ library.add(faHouse, faInfoCircle, faSearch, faArrowRight, faArrowLeft)
 const statusStore = useStatusStore()
 const { sidebarCollapsed } = storeToRefs(statusStore)
 
-// 页面是否滚动标记
-const scrollFlag = ref(false)
+defineProps({
+    scrollFlag: Boolean
+})
+
 // hitokotoRef
 const hitokotoRef = ref(null)
 
 onMounted(() => {
-    window.addEventListener('scroll', handleScroll)
     getHitokoto().then(res => {
         const { hitokoto, uuid } = res
         hitokotoRef.value.href = `https://hitokoto.cn/?uuid=${uuid}`
         hitokotoRef.value.innerText = hitokoto
-    }, err => {
-        itokotoRef.value.innerText = '双手敲尽了代码，也敲尽了岁月'
     })
 })
 
@@ -77,14 +76,7 @@ const handleCollapse = () => {
     statusStore.changeCollapseStatus()
 }
 
-const handleScroll = () => {
-    const scrollY = window.scrollY
-    if(scrollY > 0) {
-        scrollFlag.value = true
-    } else {
-        scrollFlag.value = false
-    }
-}
+
 </script>
 
 <style lang="less" scoped>
@@ -125,6 +117,7 @@ const handleScroll = () => {
           .right{
             display: flex;
             align-items: center;
+            margin-right: 10px;
             .search{
               margin: 0 20px 0 10px;
             }
