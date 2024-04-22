@@ -93,12 +93,13 @@ const handleScroll = () => {
       position: fixed;
       left: 170px;
       right: 0;
+      z-index: 999;
       .nav-bar{
         .container{
           display: flex;
           height: 75px;
           align-items: center;
-          color: white;
+          color: #fff;
           a{
             color: inherit;
           }
