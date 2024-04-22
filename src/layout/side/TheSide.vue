@@ -7,13 +7,13 @@
         :collapsed="sidebarCollapsed">
         <div class="sidebar-logo">
             <div class="logo">
-                <a href="#" class="logo-expanded">
+                <a href="" class="logo-expanded">
                     <img src="../../assets/logo/light.png" height="40" class="logo-light"
                          alt="三分">
                     <img src="../../assets/logo/dark.png" height="40" class="logo-dark do-none"
                          alt="三分">
                 </a>
-                <a href="#" class="logo-collapsed">
+                <a href="" class="logo-collapsed">
                     <img src="../../assets/logo/mini-logo.png" height="40" class="do-none"
                          alt="三分">
                     <img src="../../assets/logo/mini-logo.png" height="40" class="do-none"
@@ -63,7 +63,7 @@
 </template>
 
 <script setup>
-  import {ref} from "vue";
+import {onMounted, ref} from "vue";
   import { FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
   import {library} from "@fortawesome/fontawesome-svg-core";
   import {
@@ -83,6 +83,15 @@
 
   const statusStore = useStatusStore()
   const { sidebarCollapsed } = storeToRefs(statusStore)
+
+  onMounted(() => {
+      // 获取localstorage中的值，如果为true将进行折叠sidebar
+      // 因为sidebarCollapsed 默认false，所以不需要更改
+      const sidebarCollapsed = localStorage.getItem('sidebarCollapsed')
+      if(sidebarCollapsed === true || sidebarCollapsed === 'true') {
+          statusStore.changeCollapseStatus(sidebarCollapsed)
+      }
+  })
 </script>
 
 <style lang="less" scoped>
@@ -92,6 +101,7 @@
     top: 0;
     height: 100vh;
     max-width: 170px;
+    z-index: 999;
     :deep(.arco-layout-sider-children) {
       display: flex;
       flex-direction: column;
