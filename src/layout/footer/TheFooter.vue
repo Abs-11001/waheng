@@ -8,10 +8,10 @@
           <div class="to-top tool-item" v-show="scrollFlag" @click="scrollToTop">
               <font-awesome-icon icon="angles-up" class="fa-lg"/>
           </div>
-          <div class="contact-me tool-item">
+          <div class="contact-me tool-item" @click="addQQ">
               <font-awesome-icon :icon="['fab', 'qq']" class="fa-lg"/>
           </div>
-          <div class="switch-theme tool-item">
+          <div class="switch-theme tool-item" @click="switchTheme">
               <font-awesome-icon :icon="['fas', 'shirt']"/>
           </div>
       </div>
@@ -39,6 +39,20 @@ const scrollToTop = () => {
         top: 0,
         behavior: 'smooth'
     })
+}
+
+const switchTheme = () => {
+    // 判断是否有dark类名
+    const flag = document.body.classList.contains("dark");
+    if(flag) {
+        document.body.classList.remove('dark')
+    } else {
+        document.body.classList.add('dark')
+    }
+}
+
+const addQQ = () => {
+    window.open('http://wpa.qq.com/msgrd?v=3&uin=1196399230&site=qq&menu=yes', '_blank')
 }
 </script>
 
@@ -73,10 +87,6 @@ const scrollToTop = () => {
       }
       .tool-item:hover{
         opacity: 1;
-      }
-
-      .to-top{
-        transition: linear 1s;
       }
     }
   }
