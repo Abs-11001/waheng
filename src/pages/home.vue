@@ -8,7 +8,7 @@
             <a-layout id="content-container" :class="sidebarCollapsed ? 'mini-sidebar' : ''">
                 <the-header :scroll-flag="scrollFlag"/>
                 <the-content />
-                <the-footer/>
+                <the-footer :scroll-flag="scrollFlag"/>
             </a-layout>
         </a-scrollbar>
     </a-layout>

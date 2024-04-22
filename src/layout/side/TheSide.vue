@@ -89,7 +89,7 @@ import {onMounted, ref} from "vue";
       // 因为sidebarCollapsed 默认false，所以不需要更改
       const sidebarCollapsed = localStorage.getItem('sidebarCollapsed')
       if(sidebarCollapsed === true || sidebarCollapsed === 'true') {
-          statusStore.changeCollapseStatus(sidebarCollapsed)
+          statusStore.changeCollapseStatus(true)
       }
   })
 </script>
