@@ -1,0 +1,69 @@
+body {
+    --light-bg-color: #f9f9f9;
+    --night-bg-color: #1b1d1f;
+}
+#content-container, .main-content {
+    background: var(--light-bg-color)
+}
+
+/*背景色额*/
+.dark #content-container, .dark .main-content {
+    background: var(--night-bg-color);
+}
+
+/*链接和分类标题*/
+.dark a, .dark h2{
+     color: white !important;
+}
+
+/*header*/
+.dark .nav-bar.has-bg .container {
+    background: #2c2e2f !important;
+}
+
+/*card背景*/
+.dark .card {
+    background: #2c2e2f !important;
+}
+
+/*card标题*/
+.dark .card .title {
+    color: #c6c9cf;
+}
+
+/*footer组件*/
+.dark .arco-layout-footer span, a{
+    color: #c6c9cf;
+}
+
+/*sidebar*/
+.dark .arco-layout-sider {
+    background: #2c2e2f;
+}
+.dark .arco-layout-sider .arco-layout-sider-children .arco-menu {
+    background: #2c2e2f;
+}
+.dark .arco-layout-sider .arco-layout-sider-children .arco-menu  .arco-menu-item {
+    color: #c6c9cf;
+    background: #2c2e2f;
+    transition: .3s;
+}
+.dark .arco-layout-sider .arco-layout-sider-children .arco-menu .arco-menu-item:hover {
+    color: #fff;
+    background: #232526;
+}
+.dark .arco-layout-sider .arco-layout-sider-children .arco-menu  .arco-menu-inline-header {
+    color: #c6c9cf;
+    background: #2c2e2f;
+}
+.dark .arco-layout-sider .arco-layout-sider-children .arco-menu  .arco-menu-pop {
+    color: #c6c9cf;
+    background: #2c2e2f;
+}
+/*sidebar-logo切换*/
+.dark .arco-layout-sider .logo-light {
+    display: none;
+}
+.dark .arco-layout-sider .logo-dark {
+    display: inline-block !important;
+}

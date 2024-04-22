@@ -7,16 +7,16 @@
         :collapsed="sidebarCollapsed">
         <div class="sidebar-logo">
             <div class="logo">
-                <a href="" class="logo-expanded">
+                <a href="#" class="logo-expanded">
                     <img src="../../assets/logo/light.png" height="40" class="logo-light"
                          alt="三分">
-                    <img src="../../assets/logo/dark.png" height="40" class="logo-light do-none"
+                    <img src="../../assets/logo/dark.png" height="40" class="logo-dark do-none"
                          alt="三分">
                 </a>
-                <a href="" class="logo-collapsed">
-                    <img src="../../assets/logo/mini-logo.png" height="40" class="logo-dark do-none"
+                <a href="#" class="logo-collapsed">
+                    <img src="../../assets/logo/mini-logo.png" height="40" class="do-none"
                          alt="三分">
-                    <img src="../../assets/logo/mini-logo.png" height="40" class="logo-dark do-none"
+                    <img src="../../assets/logo/mini-logo.png" height="40" class="do-none"
                          alt="三分">
                 </a>
             </div>
@@ -52,10 +52,10 @@
         <div class="sidebar-bottom">
             <a-menu>
                 <a-menu-item>
-                    网站提交
+                    <font-awesome-icon :icon="['fas', 'file-arrow-up']" class="icon fa-lg"/> 网站提交
                 </a-menu-item>
                 <a-menu-item>
-                    关于导航
+                    <font-awesome-icon :icon="['fas', 'heart']" class="icon fa-lg"/> 关于导航
                 </a-menu-item>
             </a-menu>
         </div>
@@ -66,16 +66,23 @@
   import {ref} from "vue";
   import { FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
   import {library} from "@fortawesome/fontawesome-svg-core";
-  import {faNewspaper, faPaperPlane, faStar, faTag, faVideo} from "@fortawesome/free-solid-svg-icons";
+  import {
+      faFileArrowUp,
+      faHeart,
+      faNewspaper,
+      faPaperPlane,
+      faStar,
+      faTag,
+      faVideo
+  } from "@fortawesome/free-solid-svg-icons";
 
-  library.add(faStar, faTag, faPaperPlane, faVideo, faNewspaper)
+  library.add(faStar, faTag, faPaperPlane, faVideo, faNewspaper, faFileArrowUp, faHeart)
 
   import {useStatusStore} from "@/stores/status.js";
   import {storeToRefs} from "pinia";
 
   const statusStore = useStatusStore()
   const { sidebarCollapsed } = storeToRefs(statusStore)
-
 </script>
 
 <style lang="less" scoped>

@@ -28,6 +28,12 @@ library.add(faAnglesUp, faQq, faShirt)
 
 const scrollFlag = ref(false)
 onMounted(() => {
+    // 上次使用是否是dark模式
+    const theme = localStorage.getItem('theme')
+    if(theme === 'dark') {
+        document.body.classList.add('dark')
+    }
+
     window.addEventListener('scroll', function (e) {
         const scrollY = window.scrollY
         scrollFlag.value = scrollY > 0;
@@ -46,8 +52,10 @@ const switchTheme = () => {
     const flag = document.body.classList.contains("dark");
     if(flag) {
         document.body.classList.remove('dark')
+        localStorage.setItem('theme', '')
     } else {
         document.body.classList.add('dark')
+        localStorage.setItem('theme', 'dark')
     }
 }
 

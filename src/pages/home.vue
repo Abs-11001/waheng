@@ -28,8 +28,8 @@ const { sidebarCollapsed } = storeToRefs(statusStore)
       overflow-x: visible !important;
       margin-left: 170px;
       transition: linear .2s;
-      background: #f9f9f9;
     }
+
     #content-container.mini-sidebar {
       margin-left: 48px;
     }

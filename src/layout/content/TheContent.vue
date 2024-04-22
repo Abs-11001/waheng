@@ -1102,10 +1102,9 @@ const handleFormSubmit = () => {
     }
   }
   .main-content{
-    background: #f9f9f9;
     padding: 0 30px;
     .title{
-      margin: 1.5rem 0;
+      padding: 1.5rem 0;
       font-weight: 500;
       font-size: 1.25rem;
       color: #555;
